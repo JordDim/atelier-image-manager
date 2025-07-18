@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "40345fae-ae2a-4024-b4fa-7757308f7dad",
+		"name": "Atelier Image",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44638464",
+		"_collection_link": "https://jordan-7422117.postman.co/workspace/Jordan's-Workspace~01fdc0e6-c88b-4a1a-8520-53a492b99e0f/collection/44638464-40345fae-ae2a-4024-b4fa-7757308f7dad?action=share&source=collection_link&creator=44638464"
+	},
+	"item": [
+		{
+			"name": "Find All Images",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v1/images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4b3J5IiwiaWF0IjoxNzUyODYzMTExLCJleHAiOjE3NTI5NzExMTF9.P5OyXXkokCXOGNeGY7h2O45S6l76EfAVuA5mzTnk83DuHfJ3XlkICyKjny7qlerEWGXDBQ4EZbcWeqRJ9knbMA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Jordan/Desktop/CV PROFILE PICTURE.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4b3J5IiwiaWF0IjoxNzUyODYzMTExLCJleHAiOjE3NTI5NzExMTF9.P5OyXXkokCXOGNeGY7h2O45S6l76EfAVuA5mzTnk83DuHfJ3XlkICyKjny7qlerEWGXDBQ4EZbcWeqRJ9knbMA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v1/images/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"images",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
